@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto com Bibliotecas</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: none; /* Esconder a nav-bar inicialmente */
+        }
+        nav ul li {
+            padding: 0.5rem 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projeto com Gráficos, PDF e Leitura de CSV</h1>
+    </header>
+
+    <nav id="navbar">
+        <div onclick="toggleNav()">Menu</div>
+        <ul id="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <button id="generatePdf">Gerar PDF</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Meu Projeto</p>
+    </footer>
+    
+    <script>
+        function toggleNav() {
+            const navList = document.getElementById('nav-list');
+            navList.style.display = navList.style.display === 'none' || navList.style.display === '' ? 'block' : 'none';
+        }
+        // Seu código JavaScript para ler CSV, gerar gráfico e criar PDF vai aqui
+    </script>
+</body>
+</html>
